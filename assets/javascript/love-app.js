@@ -1,46 +1,77 @@
 var firstName = "";
 var secondName = "";
 var percentage = "";
-var queryURL = "https://love-calculator.p.rapidapi.com/getPercentage?fname=" + firstName + "&sname=" + secondName;
+var calcQueryURL = "https://love-calculator.p.rapidapi.com/getPercentage?fname=" + firstName + "&sname=" + secondName;
 var settings = "";
+var poemURL = "https://thundercomb-poetry-db-v1.p.rapidapi.com/linecount/" + percentage;
 
-$("#go").on("click", function(event) {
-	event.preventDefault();
+function loveName() {
 	// reset();
 	firstName = $("#f-name").val().trim();
 	secondName = $("#l-name").val().trim();
-	console.log(firstName);
-	console.log(secondName);
-	queryURL = "https://love-calculator.p.rapidapi.com/getPercentage?fname=" + firstName + "&sname=" + secondName;
-	// queryURL = "https://love-calculator.p.rapidapi.com/getPercentage?fname=noah&sname=emma";
 
+	calcQueryURL = "https://love-calculator.p.rapidapi.com/getPercentage?fname=" + firstName + "&sname=" + secondName;
 	settings = {
 		"async": true,
 		"crossDomain": true,
-		"url": queryURL,
+		"url": calcQueryURL,
 		"method": "GET",
 		"headers": {
 			"x-rapidapi-host": "love-calculator.p.rapidapi.com",
 			"x-rapidapi-key": "57f0a93f82msh11e9e8d0340f0b5p1eb386jsn6513d6683f3e"
 		}
 	}
-	
-	$.ajax(settings).done(function (response) {
-		console.log(response);
-		console.log(queryURL);
-		percentage = response.percentage;
-		console.log(percentage);
-		console.log(firstName);
-		console.log(secondName)
-		$("#percentage").text(percentage + "%");
-		});
 
-	// $("#percentage").text(percentage + "%");
-	// $("#poem").text(poem);
-})
+
+	$.ajax(settings).done(function (response) {
+
+		percentage = response.percentage;
+		$("#percentage").text(percentage + "%");
+
+	});
+}
+
+function poemLines(loveName) {
+	console.log(percentage);
+
+	console.log('test');
+
+	var poemURL = "https://thundercomb-poetry-db-v1.p.rapidapi.com/linecount/" + percentage;
+
+
+	console.log(poemURL);
+	settings = {
+		"async": true,
+		"crossDomain": true,
+		"url": poemURL,
+		"method": "GET",
+		"headers": {
+			"x-rapidapi-host": "thundercomb-poetry-db-v1.p.rapidapi.com",
+			"x-rapidapi-key": "2ab08fa6e5msh6a35a71dc08653cp1d8de2jsn9999fa7a0623"
+		}
+	}
+	$.ajax(settings).done(function (response) {
+		for (i = 0; i < response.length; i++) {
+			console.log(response[i]);
+
+
+		}
+
+
+	});
+
+}
 
 function reset() {
 	firstName = "";
 	secondName = "";
 	percentage = "";
 }
+
+$(document).ready(function () {
+	$("#go").on("click", function (event) {
+		event.preventDefault();
+		loveName();
+		poemLines();
+	});
+});
