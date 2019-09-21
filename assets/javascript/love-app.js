@@ -51,13 +51,15 @@ function poemLines(loveName) {
 		}
 	}
 	$.ajax(settings).done(function (response) {
-		for (i = 0; i < response.length; i++) {
-			console.log(response[i]);
-
-
+		for (var i = 0; i < response.length; i++) {
+			if (response[i].linecount === percentage) {
+				var numOfPoems = response.length;
+			}
 		}
 
+		var number = Math.floor(Math.random() * numOfPoems);
 
+		console.log(response[number]);
 	});
 
 }
