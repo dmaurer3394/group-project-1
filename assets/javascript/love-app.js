@@ -8,10 +8,11 @@ $("#go").on("click", function(event) {
 	event.preventDefault();
 	// reset();
 	firstName = $("#f-name").val().trim();
-	lastName = $("#l-name").val().trim();
+	secondName = $("#l-name").val().trim();
 	console.log(firstName);
-	console.log(lastName);
+	console.log(secondName);
 	queryURL = "https://love-calculator.p.rapidapi.com/getPercentage?fname=" + firstName + "&sname=" + secondName;
+	// queryURL = "https://love-calculator.p.rapidapi.com/getPercentage?fname=noah&sname=emma";
 
 	settings = {
 		"async": true,
@@ -30,7 +31,7 @@ $("#go").on("click", function(event) {
 		percentage = response.percentage;
 		console.log(percentage);
 		console.log(firstName);
-		console.log(lastName)
+		console.log(secondName)
 		$("#percentage").text(percentage + "%");
 		});
 
