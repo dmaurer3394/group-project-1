@@ -1,0 +1,127 @@
+body {
+    padding: 2px;
+    margin: 2%;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-image: url("../images/blackhearts.jpeg");
+    background-repeat: no-repeat;
+    background-position: 0px 4px;
+    background-size: cover;
+    padding: 2%;
+    width: 92%;
+}
+
+header {
+    margin: 0 2%;
+    align-content: center;
+    background: rgb(5, 0, 0);
+    /*there are two image links, one on my local folder and one external*/
+    /* background-image: url(http://intro-webdesign.com/CSS/assignment-2/images/flywheel.jpg);*/
+}
+
+h1 {
+    color: rgb(228, 210, 213);
+    font-variant: small-caps;
+    text-align: right;
+    font-size: 52px;
+    font-weight: bold;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap:
+}
+
+.left {
+    float: left;
+    display: inline-block: width: 30%;
+    height: 30%;
+    background-color: rgb(141, 16, 16);
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a90329+0,a90329+0,def2f4+100 */
+    background: #a90329;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #a90329 0%, #a90329 0%, #def2f4 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #a90329 0%, #a90329 0%, #def2f4 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #a90329 0%, #a90329 0%, #def2f4 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#def2f4', GradientType=0);
+    /* IE6-9 */
+    padding: 4px;
+    margin: 1%;
+    border: 5px;
+    margin: 2%;
+}
+
+.name {
+    background-color: grey;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 58%
+}
+
+img {
+    display: block;
+    height: 80%;
+    width: 80%;
+    border: solid 2px;
+    margin: 6px auto;
+}
+
+.right {
+    float: right;
+    width: 60%;
+    height: 30%;
+    padding: 2px;
+    margin: 2%;
+    border: 5px;
+    background: #2D5E75;
+    background: -webkit-linear-gradient(#293f50, #648880);
+    background: -moz-linear-gradient(#293f50, #648880);
+    background: linear-gradient(#FF8678, #2D5E75);
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#8d1010+0,e5ebee+95,d7dee3+100,f5f7f9+100 */
+    background: #8d1010;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #8d1010 0%, #e5ebee 95%, #d7dee3 100%, #f5f7f9 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #8d1010 0%, #e5ebee 95%, #d7dee3 100%, #f5f7f9 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #8d1010 0%, #e5ebee 95%, #d7dee3 100%, #f5f7f9 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#8d1010', endColorstr='#f5f7f9', GradientType=0);
+    /* IE6-9 */
+}
+
+h2 {
+    color: #BAE6E2;
+    color: #123D40;
+    font-variant: small-caps;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+/*Style the following:
+The table should be styled using at least four properties
+The table headings should have a thicker bottom border with the top two corners rounded, a background color, and at least one other property
+Style the table so that the text in the first column is left-aligned and the text in the other two columns is centered
+Set the opacity of the table rows to a value between .6 and .8 (make sure it is still visible)
+Change the opacity of a row when it is hovered over
+The table elements <td> should be styled using at least four properties*/
+
+
+}

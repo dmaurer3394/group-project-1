@@ -7,28 +7,40 @@
 
     <!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" type="text/css" href=".css"> -->
+    <link rel="stylesheet" href="assets/css/project.css">
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <h1>Love calculator and poem generator</h1>
-        </header>
-    </div>
 
-    <div class="container">
-        <h2>Enter a name</h2>
-        <form>
-            <span><input id="f-name" type="text" placeholder="First name"></span>
-            <span><input id="l-name" type="text" placeholder="Last name"></span>
-            <input class="btn btn-primary" id="go" type="submit" value="Go!">
+    <header>
+        <h1>Love calculator and poem generator</h1>
+    </header>
+
+
+
+
+    <main>
+
+        <form class="left">
+            <section class="left">
+                <h2>Enter a name</h2><br>
+                <input id="f-name" type="text" class="name" placeholder="First name"><br>
+                <input id="l-name" type="text" class="name" placeholder="Last name"><br>
+                <input class="btn btn-primary" id="go" type="submit" value="Go!">
+            </section>
         </form>
-        <br>
-        <p id="percentage"></p>
-        <br>
-        <p id="poem"></p>
-    </div>
+
+
+
+        <section class="right">
+
+            <h2 id="percentage"></h2>
+            <br>
+            <p id="poem">type js here</p>
+
+        </section>
+
+    </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/javascript/love-app.js"></script>
