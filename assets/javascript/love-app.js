@@ -6,7 +6,6 @@ var settings = "";
 var poemURL = "https://thundercomb-poetry-db-v1.p.rapidapi.com/linecount/" + percentage;
 var poemArray = [];
 var poemToDisplay = [];
-// var getResponse = false;
 
 function loveName() {
 	reset();
@@ -29,8 +28,6 @@ function loveName() {
 	$.ajax(settings).done(function (response) {
 
 		percentage = response.percentage;
-		// getResponse = true;
-		// console.log(getResponse);
 		$("#percentage").text(percentage + "%");
 		poemLines();
 		displayPoem();
@@ -101,6 +98,5 @@ $(document).ready(function () {
 		event.preventDefault();
 		loveName();
 		$("#poem").empty();
-		console.log(getResponse);
 	});
 });
