@@ -114,6 +114,10 @@ p {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+::placeholder {
+    color: rgb(85, 85, 85);
+}
+
 
 /*Style the following:
 The table should be styled using at least four properties
