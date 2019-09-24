@@ -5,7 +5,7 @@ var calcQueryURL = "https://love-calculator.p.rapidapi.com/getPercentage?fname="
 var settings = "";
 var poemURL = "https://thundercomb-poetry-db-v1.p.rapidapi.com/linecount/" + percentage;
 var poemArray = [];
-var poem = "";
+var poemToDisplay = [];
 
 function loveName() {
 	reset();
@@ -30,6 +30,8 @@ function loveName() {
 		percentage = response.percentage;
 		$("#percentage").text(percentage + "%");
 		poemLines();
+		displayPoem();
+
 
 	});
 }
@@ -60,7 +62,7 @@ function poemLines(loveName) {
 		}
 
 		var number = Math.floor(Math.random() * poemArray.length);
-		var poem = poemArray[number];
+		var poemToDisplay = poemArray[number].lines;
 
 		// for (j = 0; j < response[number].lines.length; j++) {
         //     console.log(response[number].lines[j]);
@@ -70,8 +72,18 @@ function poemLines(loveName) {
 		console.log(response)
 		console.log(response.length);
 		console.log(poemArray.length);
+		console.log(poemToDisplay);
+
+		for (i = 0; i < poemToDisplay.length; i++) {
+			var poemDiv = $("<div>").text(poemToDisplay[i]);
+			$("#poem").append(poemDiv);
+		}
 	});
 
+}
+
+function displayPoem() {
+	console.log(poemToDisplay);
 }
 
 function reset() {
@@ -85,5 +97,6 @@ $(document).ready(function () {
 	$("#go").on("click", function (event) {
 		event.preventDefault();
 		loveName();
+		$("#poem").empty();
 	});
 });
