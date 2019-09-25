@@ -75,7 +75,7 @@ function poemLines(loveName) {
 		// console.log(poemToDisplay);
 
 		for (i = 0; i < poemToDisplay.length; i++) {
-			var poemDiv = $("<div>").text(poemToDisplay[i]);
+			var poemDiv = $("<p>").text(poemToDisplay[i]);
 			$("#poem").append(poemDiv);
 		}
 	});
@@ -96,7 +96,9 @@ function reset() {
 $(document).ready(function () {
 	$("#go").on("click", function (event) {
 		event.preventDefault();
-		loveName();
-		$("#poem").empty();
+		if ($("#f-name").val().trim() != "" && $("#l-name").val().trim() != "" ) {
+			loveName();
+			$("#poem").empty();
+		}
 	});
 });
