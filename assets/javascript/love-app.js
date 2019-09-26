@@ -26,23 +26,17 @@ function loveName() {
 
 
 	$.ajax(settings).done(function (response) {
-
 		percentage = response.percentage;
 		$("#percentage").text(percentage + "%");
 		poemLines();
 		displayPoem();
-
-
 	});
 }
 
 function poemLines(loveName) {
-	// console.log(percentage);
 
 	var poemURL = "https://thundercomb-poetry-db-v1.p.rapidapi.com/linecount/" + percentage;
 
-
-	// console.log(poemURL);
 	settings = {
 		"async": true,
 		"crossDomain": true,
@@ -57,22 +51,11 @@ function poemLines(loveName) {
 		for (var i = 0; i < response.length; i++) {
 			if (response[i].linecount === percentage) {
 				poemArray.push(response[i])
-				// var numOfPoems = response.length;
 			}
 		}
 
 		var number = Math.floor(Math.random() * poemArray.length);
 		var poemToDisplay = poemArray[number].lines;
-
-		// for (j = 0; j < response[number].lines.length; j++) {
-        //     console.log(response[number].lines[j]);
-        // }
-
-		// console.log(poemArray[number]);
-		// console.log(response)
-		// console.log(response.length);
-		// console.log(poemArray.length);
-		// console.log(poemToDisplay);
 
 		for (i = 0; i < poemToDisplay.length; i++) {
 			var poemDiv = $("<p>").text(poemToDisplay[i]);
@@ -80,10 +63,6 @@ function poemLines(loveName) {
 		}
 	});
 
-}
-
-function displayPoem() {
-	// console.log(poemToDisplay);
 }
 
 function reset() {
