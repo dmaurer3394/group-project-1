@@ -82,16 +82,28 @@ function reset() {
 	poemArray = [];
 }
 
-// On click function to start the process.
+// On document load, the button will be disabled.
+// Checking for a 'keyup' on either text field, it checks for a value in both text fields.
+// If neither of them are blank, it enables the button. If one of them goes blank again, it will re-disable.
 $(document).ready(function () {
+
+	$("#go").prop("disabled", true);
+
+	$(".name").keyup(function() {
+		area = $(this);
+
+		if ($("#f-name").val() == "" || $("#l-name").val() == "") {
+			$("#go").prop("disabled", true);
+		} else {
+			$("#go").prop("disabled", false);
+		}
+	})
+
+	// On click function to start the process.
 	$("#go").on("click", function (event) {
 		event.preventDefault();
-
-		// If either text field is empty, the button will not execute any function.
-		if ($("#f-name").val().trim() != "" && $("#l-name").val().trim() != "" ) {
-			loveName();
-			$("#poem").empty();
-			$("#poem").append("<div class='loader'>");
-		}
+		loveName();
+		$("#poem").empty();
+		$("#poem").append("<div class='loader'>");
 	});
 });
