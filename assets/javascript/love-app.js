@@ -69,6 +69,10 @@ function poemLines(loveName) {
 			var poemDiv = $("<p>").text(poemToDisplay[i]);
 			$("#poem").append(poemDiv);
 		}
+
+		// This displays the author and title
+		$("#title").text(poemArray[number].title);
+		$("#author").text("Author : " + poemArray[number].author);
 	});
 
 }

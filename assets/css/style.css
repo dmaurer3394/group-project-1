@@ -341,7 +341,7 @@ body {
   padding: 2px;
   margin: 2%;
   box-sizing: border-box;
-  background-image: url("assets/images/blackhearts.jpeg");
+  background-image: url("../images/blackhearts.jpeg");
   background-repeat: no-repeat;
   background-position: 0px 4px;
   background-size: cover;
