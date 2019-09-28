@@ -87,15 +87,15 @@ function reset() {
 }
 
 // On document load, the button will be disabled.
-// Checking for a 'keyup' on either text field, it checks for a value in both text fields.
-// If neither of them are blank, it enables the button. If one of them goes blank again, it will re-disable.
 $(document).ready(function () {
 
 	$("#go").prop("disabled", true);
 
+	// On a 'keyup' of either text field, it checks for a value in both text fields.
 	$(".name").keyup(function() {
 		area = $(this);
 
+		// If neither of them are blank, it enables the button. If one of them goes blank again, it will re-disable.
 		if ($("#f-name").val() == "" || $("#l-name").val() == "") {
 			$("#go").prop("disabled", true);
 		} else {
@@ -103,7 +103,7 @@ $(document).ready(function () {
 		}
 	})
 
-	// On click function to start the process.
+	// On click function to start the process and the loader.
 	$("#go").on("click", function (event) {
 		event.preventDefault();
 		loveName();
@@ -112,6 +112,7 @@ $(document).ready(function () {
 	});
 });
 
+// Typed.js functionality. We give it what to type out as well as a speed and some parameters for backspace and looping.
 var typed = new Typed('h1', {
 	strings: ["LOVE CALCULATOR ^1000 AND ^1000 POEM GENERATOR"],
 	typeSpeed: 100,
