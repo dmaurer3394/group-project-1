@@ -111,3 +111,11 @@ $(document).ready(function () {
 		$("#poem").append("<div class='loader'>");
 	});
 });
+
+var typed = new Typed('h1', {
+	strings: ["LOVE CALCULATOR ^1000 AND ^1000 POEM GENERATOR"],
+	typeSpeed: 100,
+	backSpeed: 100,
+	smartBackspace: false,
+	loop: false
+  });
