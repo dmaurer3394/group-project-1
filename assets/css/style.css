@@ -35,7 +35,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
- html {
+html {
   line-height: 1.15;
   /* 1 */
   -webkit-text-size-adjust: 100%;
@@ -339,7 +339,7 @@ html {
 
 body {
   box-sizing: border-box;
-  background-image: url("../images/blackhearts.jpeg");
+  background-image: url("assets/images/blackhearts.jpeg");
   background-repeat: no-repeat;
   background-position: 0px 4px;
   background-size: cover;
@@ -352,6 +352,9 @@ h1 {
   background: -webkit-linear-gradient(#fefcfd, #da7586);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; }
+  @media screen and (max-width: 450px) {
+    h1 {
+      font-size: 25px; } }
 
 h2 {
   color: #fff;
@@ -375,6 +378,9 @@ main {
   border: 5px;
   margin: 2%;
   border-radius: 20px; }
+  @media screen and (max-width: 768px) {
+    .left {
+      width: 100%; } }
 
 .name {
   border: none;
@@ -394,10 +400,12 @@ img {
 .right {
   float: right;
   width: 60%;
-  height: 30%;
   padding: 2px;
   margin: 2%;
   border: 5px; }
+  @media screen and (max-width: 768px) {
+    .right {
+      width: 100%; } }
 
 p {
   font-size: 18px; }
@@ -477,12 +485,11 @@ img {
   color: #fff;
   margin-top: 5px; }
 
-  input.btn:disabled {
-    background: #cccccc;
-    border: 1px solid #999999;
-    background-color: #cccccc;
-    color: #666666;
- }
+input.btn:disabled {
+  background: #cccccc;
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666; }
 
 /*--------------------------------------------------------------
 # Navigation
