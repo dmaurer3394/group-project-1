@@ -35,7 +35,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-html {
+ html {
   line-height: 1.15;
   /* 1 */
   -webkit-text-size-adjust: 100%;
@@ -338,63 +338,51 @@ html {
   background-color: #000; }
 
 body {
-  padding: 2px;
-  margin: 2%;
   box-sizing: border-box;
-  background-image: url("../images/blackhearts.jpeg");
+  background-image: url("assets/images/blackhearts.jpeg");
   background-repeat: no-repeat;
   background-position: 0px 4px;
   background-size: cover;
-  padding: 2%;
-  width: 92%; }
+  width: 100%; }
 
 h1 {
-  color: #e4d2d5;
   font-size: 52px;
   font-family: 'Love Ya Like A Sister', cursive;
-  margin: 0; }
+  margin: 0;
+  background: -webkit-linear-gradient(#fefcfd, #da7586);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
 
 h2 {
-  color: #BAE6E2;
+  color: #fff;
   font-family: 'Love Ya Like A Sister', cursive;
-  text-align: center; }
+  margin-bottom: 0;
+  background: -webkit-linear-gradient(#fefcfd, #da7586);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+
+p {
+  color: #fff; }
 
 main {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  background: #00000099; }
 
 .left {
-  float: left;
-  display: inline-block;
   width: 30%;
-  height: 30%;
-  background-color: #8d1010;
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a90329+0,a90329+0,def2f4+100 */
-  background: #a90329;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #a90329 0%, #a90329 0%, #def2f4 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #a90329 0%, #a90329 0%, #def2f4 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #a90329 0%, #a90329 0%, #def2f4 100%);
-  /* IE6-9 */
   padding: 4px;
-  margin: 1%;
   border: 5px;
-  margin: 2%; }
+  margin: 2%;
+  border-radius: 20px; }
 
 .name {
-  background-color: grey;
   border: none;
   color: black;
-  padding: 15px 32px;
-  text-align: center;
+  padding: 15px 20px;
   text-decoration: none;
-  display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  width: 58%; }
+  margin: 4px 2px; }
 
 img {
   display: block;
@@ -409,18 +397,7 @@ img {
   height: 30%;
   padding: 2px;
   margin: 2%;
-  border: 5px;
-  background: #2D5E75;
-  background: -webkit-linear-gradient(#293f50, #648880);
-  background: -moz-linear-gradient(#293f50, #648880);
-  background: linear-gradient(#FF8678, #2D5E75);
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#8d1010+0,e5ebee+95,d7dee3+100,f5f7f9+100 */
-  background: #8d1010;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #8d1010 0%, #e5ebee 95%, #d7dee3 100%, #f5f7f9 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #8d1010 0%, #e5ebee 95%, #d7dee3 100%, #f5f7f9 100%);
-  font-family: 'Alegreya', serif; }
+  border: 5px; }
 
 p {
   font-size: 18px; }
@@ -435,12 +412,10 @@ i.far.fa-heart {
 
 .loader {
   border: 16px solid #f3f3f3;
-  /* Light grey */
-  border-top: 16px solid #3498db;
-  /* Blue */
+  border-top: 16px solid red;
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
+  width: 20px;
+  height: 20px;
   animation: spin 2s linear infinite; }
 
 @keyframes spin {
@@ -486,6 +461,22 @@ img {
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
+.btn {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f9b2ae+0,f9b2ae+0,c95871+55,ea98aa+100,a8001c+100 */
+  background: #f9b2ae;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #f9b2ae 0%, #f9b2ae 0%, #c95871 55%, #ea98aa 100%, #a8001c 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #f9b2ae 0%, #f9b2ae 0%, #c95871 55%, #ea98aa 100%, #a8001c 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #f9b2ae 0%, #f9b2ae 0%, #c95871 55%, #ea98aa 100%, #a8001c 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9b2ae', endColorstr='#a8001c',GradientType=0 );
+  /* IE6-9 */
+  padding: 10px;
+  color: #fff;
+  margin-top: 5px; }
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -508,6 +499,9 @@ img {
 # Layout
 --------------------------------------------------------------*/
 header {
+  padding: 20px; }
+
+.header-container {
   border: 10px dotted rgba(255, 0, 0, 0.88);
   padding: 16px;
   text-align: center;
