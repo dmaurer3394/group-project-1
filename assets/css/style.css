@@ -339,7 +339,7 @@ html {
 
 body {
   box-sizing: border-box;
-  background-image: url("assets/images/blackhearts.jpeg");
+  background-image: url("../images/blackhearts.jpeg");
   background-repeat: no-repeat;
   background-position: 0px 4px;
   background-size: cover;
@@ -476,6 +476,13 @@ img {
   padding: 10px;
   color: #fff;
   margin-top: 5px; }
+
+  input.btn:disabled {
+    background: #cccccc;
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+ }
 
 /*--------------------------------------------------------------
 # Navigation

@@ -30,7 +30,7 @@ function loveName() {
 	// We then call the functions to display the poem.
 	$.ajax(settings).done(function (response) {
 		percentage = response.percentage;
-		$("#percentage").text(percentage + "%");
+		$("#percentage").text("Your crush percentage is: " + percentage + "%");
 		poemLines();
 	});
 }
