@@ -107,6 +107,8 @@ $(document).ready(function () {
 	$("#go").on("click", function (event) {
 		event.preventDefault();
 		loveName();
+		$("#title").empty();
+		$("#author").empty();
 		$("#poem").empty();
 		$("#poem").append("<div class='loader'>");
 	});
